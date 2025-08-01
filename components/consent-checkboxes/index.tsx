@@ -55,6 +55,9 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
               <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
+                citysresidences.com uygulaması kapsamında paylaşacağım kişisel verilere ilişkin Kişisel Verilerin
+                Korunmasına İlişkin Aydınlatma Metni’ni, Açık Rıza Metni’ni, Ticari Elektronik İleti Aydınlatma Metni’ni
+                okudum, kabul ediyorum.
                 <a
                   target="_blank"
                   rel="norefferer noopener"
@@ -108,7 +111,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                     href="/pdf/citys-residences-acik-riza-beyani.pdf"
                     className="text-neutral-950 underline font-medium"
                   >
-                    d
+                    Tarafıma ticari elektronik ileti gönderilmesine açık rızam var.
                   </a>
                 </FormLabel>
               </div>
@@ -145,7 +148,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
                           className="text-neutral-950 underline"
                         >
-                          dasd
+                          Sms
                         </a>
                       )}
                       {name === "consentEmail" && (
@@ -155,7 +158,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
                           className="text-neutral-950 underline"
                         >
-                          dasd
+                          Email
                         </a>
                       )}
                       {name === "consentPhone" && (
@@ -165,7 +168,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
                           className="text-neutral-950 underline"
                         >
-                          sadas{" "}
+                          Telefon
                         </a>
                       )}
                     </FormLabel>

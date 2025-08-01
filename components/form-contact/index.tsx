@@ -179,11 +179,11 @@ export function ContactForm() {
     <>
       <Form {...form}>
         <form className="font-primary flex flex-col gap-6 py-10 lg:py-0 px-4" noValidate>
-          <div className="grid grid-cols-2 gap-6 lg:gap-2">
+          <div className="grid grid-cols-2 gap-2 lg:gap-2">
             <FormInput control={form.control} name="name" placeholder={`Name*`} />
             <FormInput control={form.control} name="surname" placeholder={`Surname*`} />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="col-span-1 flex flex-col gap-1">
               <FormLabel
                 className="text-neutral-950 font-normal leading-none block text-base lg:text-sm"
@@ -198,15 +198,10 @@ export function ContactForm() {
                 control={form.control}
                 name="email"
                 type="email"
-                placeholder={`Email*`}
+                placeholder={`Eposta*`}
                 className="col-span-1 lg:col-span-1"
               />
             </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="date" />
-            <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="time" />
-            <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="datetime-local" />
           </div>
           <div className="flex flex-col lg:grid grid-cols-2 gap-6 lg:gap-4">
             <div className="space-y-1">
@@ -217,7 +212,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormControl>
                       <DropdownMenuCheckboxesResidences
-                        placeholder={`Residence Type*`}
+                        placeholder={`Talep edilen konut türü*`}
                         selectedItems={residenceTypeValue !== "" ? residenceTypeValue.split(",") : []}
                         options={residenceTypeOptions}
                         onChange={(id, checked) => {
@@ -230,6 +225,16 @@ export function ContactForm() {
                   </FormItem>
                 )}
               />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            {/* <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="date" />
+            <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="time" /> */}
+            <div className="relative w-full h-10">
+              <Input placeholder="Date" className="absolute top-0 left-0 right-0 bottom-0" type="datetime-local" />
+              <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-bricky-brick rounded-md h-10 px-2 lg:px-4 flex items-center pointer-events-none">
+                Talep edilen randevu tarihi*
+              </div>
             </div>
           </div>
           <ConsentCheckboxes form={form} control={form.control} />
