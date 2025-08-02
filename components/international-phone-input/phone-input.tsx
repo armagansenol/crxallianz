@@ -48,7 +48,7 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({ value, onChange, phoneIn
   )
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-stretch gap-2">
       <Select
         onValueChange={(value) => {
           const selectedCountry = defaultCountries.find((c) => parseCountry(c).iso2 === value)
@@ -58,15 +58,15 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({ value, onChange, phoneIn
         }}
         value={phoneInput.country.iso2}
       >
-        <SelectTrigger className="w-24 h-10 rounded-md text-bricky-brick font-medium cursor-pointer text-base bt:text-sm border border-bricky-brick">
+        <SelectTrigger className="w-24 h-full rounded-md text-[var(--bricky-brick)] font-medium cursor-pointer text-base bt:text-sm border border-[var(--bricky-brick)]">
           <SelectValue placeholder="Code">+{phoneInput.country.dialCode}</SelectValue>
         </SelectTrigger>
-        <SelectContent className="z-[500] bg-white text-neutral-950 border border-bricky-brick rounded-md">
+        <SelectContent className="z-[500] bg-white text-neutral-950 border border-[var(--bricky-brick)] rounded-md">
           <SelectGroup>{countryOptions}</SelectGroup>
         </SelectContent>
       </Select>
       <Input
-        className="h-10 border border-bricky-brick rounded-md"
+        className="h-10 border border-[var(--bricky-brick)] rounded-md"
         placeholder={phoneInput.country.format?.toString().replace(/\S/g, "X") || "XXXXXXXXXX"}
         type="tel"
         value={phoneInput.inputValue}

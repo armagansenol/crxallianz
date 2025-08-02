@@ -50,7 +50,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button
-            className="h-10 w-full text-neutral-950 border border-bricky-brick flex items-center justify-between px-2 bt:px-4 rounded-md text-base bt:text-sm outline-none focus:outline-none focus:ring-0"
+            className="h-10 w-full text-neutral-950 border border-[var(--bricky-brick)] flex items-center justify-between px-2 bt:px-4 rounded-md text-base bt:text-sm outline-none focus:outline-none focus:ring-0"
             type="button"
             aria-label={`Select ${placeholder}`}
           >
@@ -61,7 +61,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                     {selectedItems?.map((item, index) => (
                       <span
                         key={index}
-                        className="bg-bricky-brick px-2 py-0.5 rounded-sm text-white tracking-widest whitespace-nowrap"
+                        className="bg-[var(--bricky-brick)] px-2 py-0.5 rounded-sm text-white tracking-widest whitespace-nowrap"
                       >
                         {item}
                       </span>
@@ -72,11 +72,11 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                 <span className="truncate">{placeholder}</span>
               )}
             </>
-            <ChevronDown className="size-4 flex-shrink-0 text-bricky-brick" />
+            <ChevronDown className="size-4 flex-shrink-0 text-[var(--bricky-brick)]" />
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className={cn(className, "w-[160px] border-bricky-brick-light flex flex-wrap gap-1.5 p-3")}
+          className={cn(className, "w-[160px] border-[var(--bricky-brick)]-light flex flex-wrap gap-1.5 p-3")}
           align="end"
         >
           {options.map((option) => (
@@ -92,16 +92,16 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                 className={`w-16 flex items-center justify-center gap-2 py-2.5 rounded-sm transition-colors duration-200 cursor-pointer group
                       ${
                         selectedItems?.includes(option.label)
-                          ? "border border-bricky-brick text-bricky-brick"
+                          ? "border border-[var(--bricky-brick)] text-[var(--bricky-brick)]"
                           : "border border-neutral-200 text-neutral-950"
                       } 
                 `}
               >
                 <div
-                  className={`h-3.5 w-3.5 rounded-sm relative overflow-hidden transition-all duration-200 border border-bricky-brick-light group-hover:bg-bricky-brick
+                  className={`h-3.5 w-3.5 rounded-sm relative overflow-hidden transition-all duration-200 border border-[var(--bricky-brick)]-light group-hover:bg-[var(--bricky-brick)]
                      ${
                        selectedItems?.includes(option.label)
-                         ? "bg-bricky-brick "
+                         ? "bg-[var(--bricky-brick)] "
                          : "bg-transparent group-hover:opacity-30"
                      } 
                   `}

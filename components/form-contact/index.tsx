@@ -62,7 +62,7 @@ const getFormSchema = () =>
 export type FormValues = z.infer<ReturnType<typeof getFormSchema>>
 
 const commonInputStyles =
-  "bg-transparent text-neutral-950 border-b border-bricky-brick rounded-none px-0 transition-colors duration-300 ease-in-out"
+  "bg-transparent text-neutral-950 border-b border-[var(--bricky-brick)] rounded-none px-0 transition-colors duration-300 ease-in-out"
 
 interface FormInputProps {
   name: keyof FormValues
@@ -87,7 +87,7 @@ const FormInput = ({ name, control, placeholder, type = "text", className }: For
             type={type}
             {...field}
             value={field.value?.toString() ?? ""}
-            className={`${commonInputStyles} h-10 px-2 lg:px-4 border border-bricky-brick rounded-md ${className}`}
+            className={`${commonInputStyles} h-10 px-2 lg:px-4 border border-[#B73D25] rounded-sm ${className}`}
             onChange={(e) => {
               const value = e.target.value
               if (name === "name" || name === "surname") {
@@ -178,10 +178,20 @@ export function ContactForm() {
   return (
     <>
       <Form {...form}>
-        <form className="font-primary flex flex-col gap-6 py-10 lg:py-0 px-4" noValidate>
+        <form className="font-primary flex flex-col gap-6 px-4" noValidate>
           <div className="grid grid-cols-2 gap-2 lg:gap-2">
-            <FormInput control={form.control} name="name" placeholder={`Name*`} />
-            <FormInput control={form.control} name="surname" placeholder={`Surname*`} />
+            <FormInput
+              className="border-[var(--bricky-brick)]"
+              control={form.control}
+              name="name"
+              placeholder={`Adınız*`}
+            />
+            <FormInput
+              className="border-[var(--bricky-brick)]"
+              control={form.control}
+              name="surname"
+              placeholder={`Soyadınız*`}
+            />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="col-span-1 flex flex-col gap-1">
@@ -228,11 +238,11 @@ export function ContactForm() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            {/* <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="date" />
-            <input className="border border-bricky-brick rounded-md h-10 px-2 lg:px-4" type="time" /> */}
+            {/* <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="date" />
+            <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="time" /> */}
             <div className="relative w-full h-10">
               <Input placeholder="Date" className="absolute top-0 left-0 right-0 bottom-0" type="datetime-local" />
-              <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-bricky-brick rounded-md h-10 px-2 lg:px-4 flex items-center pointer-events-none">
+              <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4 flex items-center pointer-events-none">
                 Talep edilen randevu tarihi*
               </div>
             </div>
