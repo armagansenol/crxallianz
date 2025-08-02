@@ -30,7 +30,7 @@ export default function Home() {
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50">
           <div className="flex items-center justify-center h-full">
-            <h1 className="text-center text-white text-4xl font-thin leading-normal tracking-wider">
+            <h1 className="text-center text-white text-4xl font-light leading-normal tracking-wider">
               CITY’S RESIDENCES <br /> HAYATINA <br /> HOŞ GELDİNİZ
             </h1>
           </div>

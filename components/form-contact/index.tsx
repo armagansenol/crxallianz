@@ -279,7 +279,7 @@ export function ContactForm() {
             />
           </div>
           <ConsentCheckboxes form={form} control={form.control} />
-          <button type="submit" className="flex relative w-52 mt-8 h-10">
+          <button type="submit" className="flex relative w-52 mt-8 h-10 pointer-events-none">
             <AnimatedButton text="GÖNDER" theme="primary" size="sm" />
           </button>
         </form>
