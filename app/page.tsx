@@ -2,6 +2,7 @@ import { ContactForm } from "@/components/form-contact"
 import { IconAllianz, IconCoil, IconCollab, IconGift, IconTrophy, Logo } from "@/components/icons"
 import { Video } from "@/components/utility/video"
 import { colors } from "@/styles/config.mjs"
+import { ChevronDown } from "lucide-react"
 
 export default function Home() {
   return (
@@ -33,6 +34,10 @@ export default function Home() {
             <h1 className="text-center text-white text-4xl font-light leading-normal tracking-wider">
               CITY’S RESIDENCES <br /> HAYATINA <br /> HOŞ GELDİNİZ
             </h1>
+          </div>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <span className="text-white text-sm font-light">Keşfetmek için kaydırın</span>
+            <ChevronDown className="w-6 h-6 text-white/50" />
           </div>
         </div>
       </section>
