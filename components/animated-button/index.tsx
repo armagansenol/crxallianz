@@ -37,10 +37,10 @@ export function AnimatedButton({
     primary: {
       textColor: colors.white,
       textHoverColor: colors["bricky-brick"],
-      bgColorClassName: "blur-bg-white",
-      bgHoverColorClassName: "blur-bg-[var(--bricky-brick)]",
+      bgColorClassName: "bg-[var(--bricky-brick)]",
+      bgHoverColorClassName: "bg-[var(--bricky-brick)]",
       borderColorClassName: "border border-[var(--bricky-brick)]",
-      borderHoverColorClassName: " borderborder-[var(--bricky-brick)]",
+      borderHoverColorClassName: " border border-[var(--bricky-brick)]",
     },
     secondary: {
       textColor: colors["bricky-brick"],
@@ -74,7 +74,7 @@ export function AnimatedButton({
         themes[theme].bgColorClassName,
         themes[theme].borderColorClassName,
         fontFamily,
-        "relative flex items-center cursor-pointer rounded-lg overflow-hidden",
+        "relative flex items-center cursor-pointer rounded-sm overflow-hidden px-2",
         {
           [s.sm]: size === "sm",
           [s.md]: size === "md",
@@ -129,14 +129,14 @@ export function AnimatedButton({
         <motion.span
           className="block"
           initial={{
-            color: themes[theme].textColor,
+            color: colors.white,
           }}
           animate={{
             x: isOn ? "200%" : 0,
           }}
           transition={transition}
         >
-          <ArrowRight className={cn(s.icon)} />
+          <ArrowRight className={cn(s.icon)} strokeWidth={1} />
         </motion.span>
       </motion.span>
       {/* background */}

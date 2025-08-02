@@ -76,7 +76,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className={cn(className, "w-[230px] border-[var(--bricky-brick)]-light flex flex-wrap gap-1.5 p-3")}
+          className={cn(className, "w-[230px] border-[var(--bricky-brick)] flex flex-wrap gap-1.5 p-3")}
           align="end"
         >
           {options.map((option) => (
@@ -98,7 +98,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                 `}
               >
                 <div
-                  className={`h-4 w-4 rounded-[3px] relative overflow-hidden transition-all duration-200 border border-[var(--bricky-brick)]-light group-hover:bg-[var(--bricky-brick)]
+                  className={`h-4 w-4 rounded-[3px] relative overflow-hidden transition-all duration-200 border border-[var(--bricky-brick)] group-hover:bg-[var(--bricky-brick)]
                      ${
                        selectedItems?.includes(option.label)
                          ? "bg-[var(--bricky-brick)] "

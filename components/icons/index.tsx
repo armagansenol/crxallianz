@@ -1258,3 +1258,16 @@ export const IconCoil = (props: Props) => {
     </span>
   )
 }
+
+export const IconCollab = (props: Props) => {
+  return (
+    <span className="inherit-dims block" style={{ transform: `rotate(${props.rotate ?? 0}deg)` }}>
+      <svg width="100%" height="100%" viewBox="0 0 28 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2.01515 0L14 17.1029L25.9848 0H28L15.0076 18.5L28 37H25.9848L14 19.8971L2.01515 37H0L12.9924 18.5L0 0H2.01515Z"
+          fill="black"
+        />
+      </svg>
+    </span>
+  )
+}

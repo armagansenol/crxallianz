@@ -21,6 +21,7 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { isPhoneValid } from "@/lib/utils"
+import { ChevronDown } from "lucide-react"
 
 const getFormSchema = () =>
   z
@@ -190,7 +191,7 @@ export function ContactForm() {
   return (
     <>
       <Form {...form}>
-        <form className="font-primary flex flex-col gap-6 px-4" noValidate>
+        <form className="font-primary flex flex-col gap-5 px-4" noValidate>
           <div className="grid grid-cols-2 gap-2 lg:gap-2">
             <FormInput
               className="border-[var(--bricky-brick)]"
@@ -205,7 +206,7 @@ export function ContactForm() {
               placeholder={`Soyadınız*`}
             />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <div className="col-span-1 flex flex-col gap-1">
               <FormLabel
                 className="text-neutral-950 font-normal leading-none block text-base lg:text-sm"
@@ -225,7 +226,7 @@ export function ContactForm() {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:grid grid-cols-2 gap-6 lg:gap-4">
+          <div className="flex flex-col lg:grid grid-cols-2 gap-5">
             <div className="space-y-1">
               <FormField
                 control={form.control}
@@ -249,9 +250,8 @@ export function ContactForm() {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            {/* <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="date" />
-            <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="time" /> */}
+          <div className="flex flex-col gap-2 relative">
+            <ChevronDown className="absolute top-1/2 -translate-y-1/2 right-2 size-4 flex-shrink-0 text-[var(--bricky-brick)] z-50" />
             <FormField
               control={form.control}
               name="dateTime"
@@ -279,8 +279,8 @@ export function ContactForm() {
             />
           </div>
           <ConsentCheckboxes form={form} control={form.control} />
-          <button type="submit" className="flex relative w-40 lg:w-48 mt-8">
-            <AnimatedButton text="Submit" theme="secondary" size="sm" />
+          <button type="submit" className="flex relative w-52 mt-8 h-10">
+            <AnimatedButton text="GÖNDER" theme="primary" size="sm" />
           </button>
         </form>
       </Form>

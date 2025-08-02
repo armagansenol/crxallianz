@@ -58,7 +58,7 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({ value, onChange, phoneIn
         }}
         value={phoneInput.country.iso2}
       >
-        <SelectTrigger className="w-24 h-11 rounded-sm text-[var(--bricky-brick)] font-medium cursor-pointer text-base bt:text-sm border border-[var(--bricky-brick)]">
+        <SelectTrigger className="w-24 rounded-sm text-[var(--bricky-brick)] font-medium cursor-pointer text-base border border-[var(--bricky-brick)] [&>svg]:text-[var(--bricky-brick)]">
           <SelectValue placeholder="Code">+{phoneInput.country.dialCode}</SelectValue>
         </SelectTrigger>
         <SelectContent className="z-[500] bg-white text-neutral-950 border border-[var(--bricky-brick)] rounded-md">
