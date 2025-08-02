@@ -81,7 +81,7 @@ export function AnimatedButton({
           [s.lg]: size === "lg",
           [s["fit-content"]]: size === "fit-content",
           "justify-center gap-6": size === "fit-content",
-          "justify-between w-full": size !== "fit-content",
+          "justify-between w-full h-full": size !== "fit-content",
         }
       )}
       onMouseEnter={toggleSwitch}

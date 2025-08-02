@@ -1,9 +1,20 @@
-import type { Metadata } from "next"
 import "./globals.css"
 
-export const metadata: Metadata = {
-  title: "CITY'S RESIDENCES X ALLIANZ",
-  description: "CITY’S RESIDENCES HAYATINA HOŞ GELDİNİZ",
+export async function generateMetadata() {
+  return {
+    title: "City's Residences X Allianz",
+    description: "City's Residences Hayatına Hoş Geldiniz",
+    icons: {
+      icon: [
+        { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+        { url: "/favicon/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+        { url: "/favicon/favicon.ico", sizes: "any", type: "image/x-icon" },
+      ],
+      apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    },
+  }
 }
 
 export default function RootLayout({

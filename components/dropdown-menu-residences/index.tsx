@@ -1,15 +1,16 @@
 "use client"
 
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
-import cn from "clsx"
-import { Check, ChevronDown } from "lucide-react"
-import { forwardRef, useImperativeHandle } from "react"
+
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { cn } from "@/lib/utils"
+import { Check, ChevronDown } from "lucide-react"
+import { forwardRef, useImperativeHandle } from "react"
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -106,8 +107,14 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                      } 
                   `}
                 >
-                  <Check className={`w-full h-full absolute top-0 left-0 text-white`} />
+                  <Check className="w-full h-full absolute top-0 left-0 text-white" />
                 </div>
+                {/* <Checkbox
+                  checked={selectedItems?.includes(option.label)}
+                  onCheckedChange={(checked) => {
+                    handleCheckedChange(option.id, checked)
+                  }}
+                /> */}
                 <span className="tracking-widest">{option.label}</span>
               </div>
             </DropdownMenuCheckboxItem>
