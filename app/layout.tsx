@@ -35,7 +35,9 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/zao2pgo.css" />
       </head>
-      <body className={`antialiased ${nunitoSans.variable} font-nunito-sans`}>{children}</body>
+      <body className={`antialiased ${nunitoSans.variable}`} style={{ fontFamily: "futura-pt" }}>
+        {children}
+      </body>
     </html>
   )
 }
