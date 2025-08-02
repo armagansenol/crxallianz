@@ -1,6 +1,7 @@
 import "./globals.css"
 
 import { Nunito_Sans } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 
 export async function generateMetadata() {
   return {
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body className={`antialiased ${nunitoSans.variable}`} style={{ fontFamily: `"futura-pt", sans-serif` }}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
