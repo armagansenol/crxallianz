@@ -221,7 +221,7 @@ export function ContactForm() {
                 control={form.control}
                 name="email"
                 type="email"
-                placeholder={`Eposta*`}
+                placeholder={`Email*`}
                 className="col-span-1 lg:col-span-1"
               />
             </div>
