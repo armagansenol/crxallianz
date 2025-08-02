@@ -78,9 +78,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-4 mb-5">
-        <p className="text-left text-black text-lg font-regular">
-          Ekibimizin sizinle iletişime geçebilmesi için lütfen aşağıdaki kayıt formunu doldurunuz.
+      <section className="px-4 mb-6">
+        <p className="text-left text-black text-xl font-regular">
+          Ekibimizin sizinle iletişime geçebilmesi için <br /> lütfen aşağıdaki kayıt formunu doldurunuz.
         </p>
       </section>
       <section className="mb-12">
