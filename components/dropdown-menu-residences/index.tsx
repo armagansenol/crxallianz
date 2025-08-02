@@ -50,7 +50,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button
-            className="h-10 w-full text-neutral-950 border border-[var(--bricky-brick)] flex items-center justify-between px-2 bt:px-4 rounded-md text-base bt:text-sm outline-none focus:outline-none focus:ring-0"
+            className="h-11 w-full text-neutral-950 border border-[var(--bricky-brick)] flex items-center justify-between px-2 bt:px-4 rounded-sm text-base bt:text-sm outline-none focus:outline-none focus:ring-0"
             type="button"
             aria-label={`Select ${placeholder}`}
           >
@@ -76,7 +76,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className={cn(className, "w-[160px] border-[var(--bricky-brick)]-light flex flex-wrap gap-1.5 p-3")}
+          className={cn(className, "w-[230px] border-[var(--bricky-brick)]-light flex flex-wrap gap-1.5 p-3")}
           align="end"
         >
           {options.map((option) => (
@@ -98,7 +98,7 @@ export const DropdownMenuCheckboxesResidences = forwardRef<DropdownMenuCheckboxe
                 `}
               >
                 <div
-                  className={`h-3.5 w-3.5 rounded-sm relative overflow-hidden transition-all duration-200 border border-[var(--bricky-brick)]-light group-hover:bg-[var(--bricky-brick)]
+                  className={`h-4 w-4 rounded-[3px] relative overflow-hidden transition-all duration-200 border border-[var(--bricky-brick)]-light group-hover:bg-[var(--bricky-brick)]
                      ${
                        selectedItems?.includes(option.label)
                          ? "bg-[var(--bricky-brick)] "

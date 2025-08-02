@@ -55,33 +55,36 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
               <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
-                citysresidences.com uygulaması kapsamında paylaşacağım kişisel verilere ilişkin Kişisel Verilerin
-                Korunmasına İlişkin Aydınlatma Metni’ni, Açık Rıza Metni’ni, Ticari Elektronik İleti Aydınlatma Metni’ni
-                okudum, kabul ediyorum.
-                <a
-                  target="_blank"
-                  rel="norefferer noopener"
-                  href="/pdf/citys-residences-kvkk-aydinlatma-metni.pdf"
-                  className="text-neutral-950 underline font-medium"
-                >
-                  a
-                </a>
-                <a
-                  target="_blank"
-                  rel="norefferer noopener"
-                  href="/pdf/citys-residences-acik-riza-metni.pdf"
-                  className="text-neutral-950 underline font-medium"
-                >
-                  b
-                </a>
-                <a
-                  target="_blank"
-                  rel="norefferer noopener"
-                  href="/pdf/citys-residences-ticari-elektronik-ileti-aydinlatma-metni.pdf"
-                  className="text-neutral-950 underline font-medium"
-                >
-                  c
-                </a>
+                <span>
+                  citysresidences.com uygulaması kapsamında paylaşacağım kişisel verilere ilişkin 
+                  <a
+                    target="_blank"
+                    rel="norefferer noopener"
+                    href="/pdf/citys-residences-kvkk-aydinlatma-metni.pdf"
+                    className="text-neutral-950 underline font-medium inline"
+                  >
+                    Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni
+                  </a>
+                  ’ni, 
+                  <a
+                    target="_blank"
+                    rel="norefferer noopener"
+                    href="/pdf/citys-residences-kvkk-aydinlatma-metni.pdf"
+                    className="text-neutral-950 underline font-medium inline"
+                  >
+                    Açık Rıza Metni
+                  </a>
+                  ’ni, 
+                  <a
+                    target="_blank"
+                    rel="norefferer noopener"
+                    href="/pdf/citys-residences-kvkk-aydinlatma-metni.pdf"
+                    className="text-neutral-950 underline font-medium inline"
+                  >
+                    Ticari Elektronik İleti Aydınlatma Metni
+                  </a>
+                  ’ni okudum, kabul ediyorum.
+                </span>
               </FormLabel>
             </div>
             <FormMessage />
@@ -105,14 +108,17 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                   />
                 </FormControl>
                 <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
-                  <a
-                    target="_blank"
-                    rel="norefferer noopener"
-                    href="/pdf/citys-residences-acik-riza-beyani.pdf"
-                    className="text-neutral-950 underline font-medium"
-                  >
-                    Tarafıma ticari elektronik ileti gönderilmesine açık rızam var.
-                  </a>
+                  <span className="text-neutral-950 font-medium">
+                    Tarafıma ticari elektronik ileti gönderilmesine{" "}
+                    <a
+                      className="underline"
+                      target="_blank"
+                      rel="norefferer noopener"
+                      href="/pdf/citys-residences-acik-riza-beyani.pdf"
+                    >
+                      açık rızam var.
+                    </a>
+                  </span>
                 </FormLabel>
               </div>
               <FormMessage />
@@ -146,7 +152,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           target="_blank"
                           rel="norefferer noopener"
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
-                          className="text-neutral-950 underline"
+                          className="text-neutral-950"
                         >
                           Sms
                         </a>
@@ -156,7 +162,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           target="_blank"
                           rel="norefferer noopener"
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
-                          className="text-neutral-950 underline"
+                          className="text-neutral-950"
                         >
                           Email
                         </a>
@@ -166,7 +172,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                           target="_blank"
                           rel="norefferer noopener"
                           href="/pdf/kvkk-aydinlatma-metni.pdf"
-                          className="text-neutral-950 underline"
+                          className="text-neutral-950"
                         >
                           Telefon
                         </a>

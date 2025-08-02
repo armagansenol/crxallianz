@@ -38,19 +38,19 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center text-center">
-              <div className="w-20 h-20 mb-6 relative">
+              <div className="w-32 h-32 mb-8 relative">
                 <IconGift />
               </div>
               <h3 className="text-black text-3xl font-medium">Özel Komşu İndirimi</h3>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-20 h-20 mb-6 relative">
+              <div className="w-32 h-32 mb-8 relative">
                 <IconTrophy />
               </div>
               <h3 className="text-black text-3xl font-medium">Öncelikli Daire Seçme Fırsatı</h3>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-20 h-20 mb-6 relative">
+              <div className="w-32 h-auto mb-8 relative">
                 <IconCoil />
               </div>
               <h3 className="text-black text-3xl font-medium">Komşumuza Ödeme Planlarında Ekstra Esneklik</h3>

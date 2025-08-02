@@ -25,22 +25,21 @@ import { isPhoneValid } from "@/lib/utils"
 const getFormSchema = () =>
   z
     .object({
-      name: z.string().min(2, { message: "Name is required" }),
-      surname: z.string().min(2, { message: "Surname is required" }),
+      name: z.string().min(2, { message: "Gerekli alan" }),
+      surname: z.string().min(2, { message: "Gerekli alan" }),
       countryCode: z.string(),
       phone: z.string().refine(
         (val) => {
           return isPhoneValid(val)
         },
-        { message: "Phone is required" }
+        { message: "Gerekli alan" }
       ),
-      email: z.string().min(1, { message: "Email is required" }).email({ message: "Email is invalid" }),
-      residenceType: z.string().min(1, { message: "Residence type is required" }),
-      howDidYouHearAboutUs: z.string().min(1, { message: "How did you hear about us is required" }),
-      message: z.string(),
-      consent: z.boolean().refine((data) => data === true, { message: "Consent is required" }),
+      email: z.string().min(1, { message: "Gerekli alan" }).email({ message: "Gerekli alan" }),
+      residenceType: z.string().min(1, { message: "Gerekli alan" }),
+      dateTime: z.string().min(1, { message: "Gerekli alan" }),
+      consent: z.boolean().refine((data) => data === true, { message: "Gerekli alan" }),
       consentElectronicMessage: z.boolean().refine((data) => data === true, {
-        message: "Consent is required",
+        message: "Gerekli alan",
       }),
       consentSms: z.boolean(),
       consentEmail: z.boolean(),
@@ -87,7 +86,7 @@ const FormInput = ({ name, control, placeholder, type = "text", className }: For
             type={type}
             {...field}
             value={field.value?.toString() ?? ""}
-            className={`${commonInputStyles} h-10 px-2 lg:px-4 border border-[#B73D25] rounded-sm ${className}`}
+            className={`${commonInputStyles} h-11 px-2 lg:px-4 border border-[#B73D25] rounded-sm ${className}`}
             onChange={(e) => {
               const value = e.target.value
               if (name === "name" || name === "surname") {
@@ -111,6 +110,20 @@ export function ContactForm() {
 
   const residenceTypeDropdownRef = useRef<DropdownMenuCheckboxesRef>(null)
 
+  // Function to format datetime to dd.mm.yy-hh:mm
+  const formatDateTime = (dateTimeString: string): string => {
+    if (!dateTimeString) return "Talep edilen randevu tarihi*"
+
+    const date = new Date(dateTimeString)
+    const day = date.getDate().toString().padStart(2, "0")
+    const month = (date.getMonth() + 1).toString().padStart(2, "0")
+    const year = date.getFullYear().toString().slice(-2)
+    const hours = date.getHours().toString().padStart(2, "0")
+    const minutes = date.getMinutes().toString().padStart(2, "0")
+
+    return `${day}.${month}.${year} - ${hours}:${minutes}`
+  }
+
   const form = useForm<FormValues>({
     resolver: zodResolver(getFormSchema()),
     defaultValues: {
@@ -120,8 +133,7 @@ export function ContactForm() {
       phone: "",
       email: "",
       residenceType: "",
-      howDidYouHearAboutUs: "",
-      message: "",
+      dateTime: "",
       consent: false,
       consentElectronicMessage: false,
       consentSms: false,
@@ -240,12 +252,31 @@ export function ContactForm() {
           <div className="flex flex-col gap-2">
             {/* <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="date" />
             <input className="border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4" type="time" /> */}
-            <div className="relative w-full h-10">
-              <Input placeholder="Date" className="absolute top-0 left-0 right-0 bottom-0" type="datetime-local" />
-              <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-[var(--bricky-brick)] rounded-md h-10 px-2 lg:px-4 flex items-center pointer-events-none">
-                Talep edilen randevu tarihi*
-              </div>
-            </div>
+            <FormField
+              control={form.control}
+              name="dateTime"
+              render={({ field }) => (
+                <FormItem>
+                  <div className="relative w-full h-11">
+                    <Input
+                      placeholder="Date"
+                      className="absolute top-0 left-0 right-0 bottom-0"
+                      type="datetime-local"
+                      {...field}
+                      onChange={(e) => {
+                        const value = e.target.value
+                        field.onChange(value)
+                        console.log("Selected date and time:", value)
+                        console.log("Form data:", form.getValues())
+                      }}
+                    />
+                    <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-[var(--bricky-brick)] rounded-sm px-2 lg:px-4 flex items-center pointer-events-none">
+                      {formatDateTime(field.value || "")}
+                    </div>
+                  </div>
+                </FormItem>
+              )}
+            />
           </div>
           <ConsentCheckboxes form={form} control={form.control} />
           <button type="submit" className="flex relative w-40 lg:w-48 mt-8">
