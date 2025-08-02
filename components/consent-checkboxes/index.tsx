@@ -54,7 +54,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
               <FormControl>
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
-              <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
+              <FormLabel className="text-[0.9rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
                 <span>
                   citysresidences.com uygulaması kapsamında paylaşacağım kişisel verilere ilişkin 
                   <a
@@ -107,7 +107,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                     }}
                   />
                 </FormControl>
-                <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
+                <FormLabel className="text-[0.9rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
                   <span className="text-neutral-950 font-medium">
                     Tarafıma ticari elektronik ileti gönderilmesine{" "}
                     <a
@@ -146,7 +146,7 @@ export function ConsentCheckboxes({ control, className, form }: ConsentCheckboxe
                         }}
                       />
                     </FormControl>
-                    <FormLabel className="text-[0.8rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
+                    <FormLabel className="text-[0.9rem] text-neutral-950 font-normal leading-snug cursor-pointer max-w-[90%]">
                       {name === "consentSms" && <span className="text-neutral-950">Sms</span>}
                       {name === "consentEmail" && <span className="text-neutral-950">Email</span>}
                       {name === "consentPhone" && <span className="text-neutral-950">Telefon</span>}
