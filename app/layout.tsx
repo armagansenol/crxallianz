@@ -1,5 +1,7 @@
 import "./globals.css"
 
+import { Nunito_Sans } from "next/font/google"
+
 export async function generateMetadata() {
   return {
     title: "City's Residences X Allianz",
@@ -17,6 +19,12 @@ export async function generateMetadata() {
   }
 }
 
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-nunito-sans",
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,9 +35,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/zao2pgo.css" />
       </head>
-      <body className={`antialiased`} style={{ fontFamily: "Futura" }}>
-        {children}
-      </body>
+      <body className={`antialiased ${nunitoSans.variable} font-nunito-sans`}>{children}</body>
     </html>
   )
 }

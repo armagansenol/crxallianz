@@ -87,7 +87,7 @@ const FormInput = ({ name, control, placeholder, type = "text", className }: For
             type={type}
             {...field}
             value={field.value?.toString() ?? ""}
-            className={`${commonInputStyles} h-11 px-2 lg:px-4 border border-[#B73D25] rounded-sm ${className}`}
+            className={`${commonInputStyles} h-11 px-2 lg:px-4 border border-[var(--bricky-brick)] placeholder:text-[var(--bricky-brick)]/40 rounded-sm ${className}`}
             onChange={(e) => {
               const value = e.target.value
               if (name === "name" || name === "surname") {
@@ -270,7 +270,7 @@ export function ContactForm() {
                         console.log("Form data:", form.getValues())
                       }}
                     />
-                    <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-thin bg-white border border-[var(--bricky-brick)] rounded-sm px-2 lg:px-4 flex items-center pointer-events-none">
+                    <div className="absolute top-0 left-0 right-0 bottom-0 text-neutral-950 text-base font-regular bg-white border border-[var(--bricky-brick)] rounded-sm px-2 lg:px-4 flex items-center pointer-events-none">
                       {formatDateTime(field.value || "")}
                     </div>
                   </div>

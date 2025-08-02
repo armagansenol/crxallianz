@@ -66,7 +66,7 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({ value, onChange, phoneIn
         </SelectContent>
       </Select>
       <Input
-        className="h-11 border border-[var(--bricky-brick)] rounded-sm"
+        className="h-11 border border-[var(--bricky-brick)] rounded-sm placeholder:text-[var(--bricky-brick)]/40"
         placeholder={phoneInput.country.format?.toString().replace(/\S/g, "X") || "XXXXXXXXXX"}
         type="tel"
         value={phoneInput.inputValue}

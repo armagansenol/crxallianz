@@ -31,7 +31,7 @@ export default function Home() {
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50">
           <div className="flex items-center justify-center h-full">
-            <h1 className="text-center text-white text-4xl font-light leading-normal tracking-wider">
+            <h1 className="text-center text-white text-4xl font-medium leading-normal tracking-wider">
               CITY’S RESIDENCES <br /> HAYATINA <br /> HOŞ GELDİNİZ
             </h1>
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
               <div className="w-32 h-32 mb-6 relative">
                 <IconGift />
               </div>
-              <h3 className="text-black text-4xl leading-snug font-medium">
+              <h3 className="text-black text-4xl leading-snug font-bold">
                 Özel <br />
                 Komşu İndirimi
               </h3>
@@ -57,7 +57,7 @@ export default function Home() {
               <div className="w-32 h-32 mb-8 relative">
                 <IconTrophy />
               </div>
-              <h3 className="text-black text-4xl leading-snug font-medium">
+              <h3 className="text-black text-4xl leading-snug font-bold">
                 Öncelikli Daire <br />
                 Seçme Fırsatı
               </h3>
@@ -66,7 +66,7 @@ export default function Home() {
               <div className="w-36 h-auto mb-8 relative">
                 <IconCoil />
               </div>
-              <h3 className="text-black text-4xl leading-snug font-medium">
+              <h3 className="text-black text-4xl leading-snug font-bold">
                 Komşumuza <br />
                 Ödeme Planlarında <br />
                 Ekstra Esneklik
@@ -76,14 +76,14 @@ export default function Home() {
         </div>
       </section>
       <section className="px-4 mb-5">
-        <p className="text-left text-black text-lg font-thin">
+        <p className="text-left text-black text-lg font-regular">
           Ekibimizin sizinle iletişime geçebilmesi için lütfen aşağıdaki kayıt formunu doldurunuz.
         </p>
       </section>
       <section className="mb-12">
         <ContactForm />
       </section>
-      <div className="mx-4 py-4 text-black text-sm font-thin border-t border-b-slate-300">
+      <div className="mx-4 py-4 text-black text-sm font-regular border-t border-b-slate-300">
         2025 © City’s İstanbul Residences - Tüm hakları saklıdır.
       </div>
     </div>
