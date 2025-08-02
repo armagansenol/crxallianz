@@ -235,7 +235,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormControl>
                       <DropdownMenuCheckboxesResidences
-                        placeholder={`Talep edilen konut türü*`}
+                        placeholder={`Tercih edilen konut türü*`}
                         selectedItems={residenceTypeValue !== "" ? residenceTypeValue.split(",") : []}
                         options={residenceTypeOptions}
                         onChange={(id, checked) => {
