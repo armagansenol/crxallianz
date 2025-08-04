@@ -1,10 +1,10 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useGSAP } from "@gsap/react"
 import NumberFlow from "@number-flow/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useGSAP } from "@gsap/react"
+import { useEffect, useRef, useState } from "react"
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
@@ -31,7 +31,7 @@ const animateNumber = (
   }
 }
 
-export function Gauge({ value = 100, duration = 1000 }: GaugeProps) {
+export function Gauge({ value = 100 }: GaugeProps) {
   const pathRef = useRef<SVGPathElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [strokeDasharray, setStrokeDasharray] = useState(0)
@@ -133,9 +133,6 @@ export function Gauge({ value = 100, duration = 1000 }: GaugeProps) {
               d="M 180 100 A 80 80 0 1 1 20 100 A 80 80 0 1 1 180 100"
               strokeDasharray={strokeDasharray}
               strokeDashoffset={strokeDashoffset}
-              style={{
-                transition: `stroke-dashoffset ${duration}ms`,
-              }}
             />
           </g>
         </svg>
