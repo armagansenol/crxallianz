@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/form-contact"
+import { Gauge } from "@/components/gauge"
 import { IconAllianz, IconCoil, IconCollab, IconGift, IconTrophy, Logo } from "@/components/icons"
 import { Video } from "@/components/utility/video"
 import { colors } from "@/styles/config.mjs"
@@ -30,13 +31,30 @@ export default function Home() {
           className="w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50">
-          <div className="flex items-center justify-center h-full">
-            <h1
+          <div className="flex flex-col items-center justify-center h-full text-center text-white text-4xl font-medium leading-normal tracking-wider">
+            {/* <TextAnimation
               className="text-center text-white text-4xl font-medium leading-normal tracking-wider"
               style={{ fontFamily: "Futura" }}
             >
-              CITY’S RESIDENCES <br /> HAYATINA <br /> HOŞ GELDİNİZ
-            </h1>
+              CITY&apos;S RESIDENCES
+            </TextAnimation>
+            <TextAnimation
+              className="text-center text-white text-4xl font-medium leading-normal tracking-wider"
+              style={{ fontFamily: "Futura" }}
+            >
+              HAYATINA
+            </TextAnimation>
+            <TextAnimation
+              className="text-center text-white text-4xl font-medium leading-normal tracking-wider"
+              style={{ fontFamily: "Futura" }}
+            >
+              HOŞ GELDİNİZ
+            </TextAnimation> */}
+            CITY&apos;S RESIDENCES
+            <br />
+            HAYATINA
+            <br />
+            HOŞ GELDİNİZ
           </div>
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center">
             <span className="text-white text-sm font-light">Keşfetmek için kaydırın</span>
@@ -77,6 +95,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center gap-8 mb-16">
+        <h3 className="text-black text-5xl leading-none font-medium text-center">
+          İlk 100
+          <br />
+          Daireye Özel
+        </h3>
+        <Gauge value={90} />
       </section>
       <section className="px-4 mb-6">
         <p className="text-left text-black text-xl font-regular">
