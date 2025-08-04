@@ -63,20 +63,20 @@ export function Gauge({ value = 100 }: GaugeProps) {
             })
           }
         },
-        onEnterBack: () => {
-          // Animate number
-          animateNumber(value, setDisplayValue)
+        // onEnterBack: () => {
+        //   // Animate number
+        //   animateNumber(value, setDisplayValue)
 
-          // Animate SVG circle fill independently
-          if (pathRef.current) {
-            const pathLength = pathRef.current.getTotalLength()
-            gsap.to(pathRef.current, {
-              strokeDashoffset: pathLength - (pathLength * value) / 100,
-              duration: 2, // 2 second duration
-              ease: "expo.out",
-            })
-          }
-        },
+        //   // Animate SVG circle fill independently
+        //   if (pathRef.current) {
+        //     const pathLength = pathRef.current.getTotalLength()
+        //     gsap.to(pathRef.current, {
+        //       strokeDashoffset: pathLength - (pathLength * value) / 100,
+        //       duration: 2, // 2 second duration
+        //       ease: "expo.out",
+        //     })
+        //   }
+        // },
       },
     })
   }, [value])
