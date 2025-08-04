@@ -94,8 +94,8 @@ export function Gauge({ value = 100 }: GaugeProps) {
       <div className="relative w-84 h-84">
         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
           <span className="relative text-7xl text-[var(--bricky-brick)] font-medium">
-            <span className="text-5xl absolute bottom-2 left-0 -translate-x-full">%</span>
-            <span className="tracking-tighter">
+            <span className="text-5xl absolute bottom-2.5 left-0 -translate-x-full">%</span>
+            <span>
               <NumberFlow value={displayValue} trend={0} format={{ notation: "compact" }} />
             </span>
             <span className="text-4xl absolute top-0 right-0 translate-x-1/2">*</span>
