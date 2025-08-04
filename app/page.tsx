@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative" style={{ fontFamily: `"futura-pt", sans-serif` }}>
       <div className="flex items-center justify-between py-3 px-10 absolute top-0 left-0 right-0 z-50 bg-white/80 ">
         <div className="w-28">
           <Logo fill={colors["bricky-brick"]} />

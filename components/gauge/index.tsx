@@ -6,8 +6,9 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect, useRef, useState } from "react"
 
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(useGSAP, ScrollTrigger)
+}
 
 export interface GaugeProps {
   value?: number // 0 to 100
