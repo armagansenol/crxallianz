@@ -96,7 +96,7 @@ export function Gauge({ value = 100 }: GaugeProps) {
           <span className="relative text-7xl text-[var(--bricky-brick)] font-medium">
             <span className="text-5xl absolute bottom-2.5 left-0 -translate-x-full">%</span>
             <span>
-              <NumberFlow value={displayValue} trend={0} format={{ notation: "compact" }} />
+              <NumberFlow value={displayValue} trend={1} format={{ notation: "compact" }} />
             </span>
             <span className="text-4xl absolute top-0 right-0 translate-x-1/2">*</span>
           </span>
