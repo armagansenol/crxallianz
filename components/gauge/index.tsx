@@ -112,11 +112,11 @@ export function Gauge({ value = 100 }: GaugeProps) {
           <defs>
             <linearGradient id="spinner-secondHalf">
               <stop offset="0%" stopOpacity="0" stopColor="currentColor" />
-              <stop offset="50%" stopOpacity="0.5" stopColor="currentColor" />
+              <stop offset="50%" stopOpacity="0.3" stopColor="currentColor" />
             </linearGradient>
-            <linearGradient id="spinner-firstHalf">
+            <linearGradient id="spinner-firstHalf" x1="0%" y1="0%" x2="45%" y2="120%">
               <stop offset="0%" stopOpacity="1" stopColor="currentColor" />
-              <stop offset="100%" stopOpacity="0.3" stopColor="currentColor" />
+              <stop offset="100%" stopOpacity="0.2" stopColor="currentColor" />
             </linearGradient>
           </defs>
           <g strokeWidth="14">
