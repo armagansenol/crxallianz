@@ -19,8 +19,8 @@ export interface GaugeProps {
 const animateNumber = (
   targetValue: number,
   onUpdate: (value: number) => void,
-  parts: number = 4,
-  delay: number = 100
+  parts: number = 6,
+  delay: number = 150
 ) => {
   onUpdate(0)
 
@@ -77,12 +77,22 @@ export function Gauge({ value = 100 }: GaugeProps) {
 
   return (
     <div ref={containerRef} className="flex flex-col items-center gap-2">
-      <div className="relative w-84 h-84">
+      <div className="relative w-92 h-92">
         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
           <span className="relative text-7xl text-[var(--bricky-brick)] font-medium">
             <span className="text-5xl absolute bottom-2.5 left-0 -translate-x-full">%</span>
             <span>
-              <NumberFlow value={displayValue} trend={1} format={{ notation: "compact" }} />
+              <NumberFlow
+                value={displayValue}
+                trend={1}
+                format={{ notation: "compact" }}
+                transformTiming={{
+                  duration: 500,
+                  easing: "ease-out",
+                }}
+                spinTiming={{ duration: 2000, easing: "ease-out" }}
+                opacityTiming={{ duration: 1000, easing: "ease-out" }}
+              />
             </span>
             <span className="text-4xl absolute top-0 right-0 translate-x-1/2">*</span>
           </span>
@@ -124,7 +134,7 @@ export function Gauge({ value = 100 }: GaugeProps) {
           </g>
         </svg>
       </div>
-      <span className="block text-lg text-center">
+      <span className="block text-2xl text-center">
         *İlk %<span>{value}</span> Rezerve Edildi
       </span>
     </div>
