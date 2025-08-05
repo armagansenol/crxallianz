@@ -58,7 +58,7 @@ export function Gauge({ value = 100 }: GaugeProps) {
             const pathLength = pathRef.current.getTotalLength()
             gsap.to(pathRef.current, {
               strokeDashoffset: pathLength - (pathLength * value) / 100,
-              duration: 2, // 2 second duration
+              duration: 4,
               ease: "expo.out",
             })
           }
