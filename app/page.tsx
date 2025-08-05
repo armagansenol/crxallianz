@@ -1,9 +1,11 @@
 import { ContactForm } from "@/components/form-contact"
 import { Gauge } from "@/components/gauge"
-import { IconAllianz, IconCoil, IconCollab, IconGift, IconTrophy, Logo } from "@/components/icons"
+import { IconAllianz, IconCollab, Logo } from "@/components/icons"
 import { LottiePlayer } from "@/components/lottie-player"
 import { Video } from "@/components/utility/video"
-import testAnimation from "@/public/lottie/data.json"
+import cupLottie from "@/public/lottie/cup.json"
+import packLottie from "@/public/lottie/pack.json"
+import springLottie from "@/public/lottie/spring.json"
 import { colors } from "@/styles/config.mjs"
 import { ChevronDown } from "lucide-react"
 
@@ -64,29 +66,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Lottie Animation Section */}
-      <section className="py-16 px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-black text-4xl leading-snug font-bold mb-8">Test Lottie Animation</h3>
-            <LottiePlayer animationData={testAnimation} />
-            {/* <Lottie
-              animationData={testAnimation}
-              loop={true}
-              autoplay={true}
-              style={{ width: "100%", height: "100%" }}
-            /> */}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col gap-20">
             <div className="flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-6 relative">
-                <IconGift />
+              <div className="w-48 mb-6 relative">
+                <LottiePlayer animationData={packLottie} />
               </div>
               <h3 className="text-black text-4xl leading-snug font-bold">
                 Özel <br />
@@ -94,8 +79,8 @@ export default function Home() {
               </h3>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-32 h-32 mb-8 relative">
-                <IconTrophy />
+              <div className="w-48 mb-4 relative">
+                <LottiePlayer animationData={cupLottie} />
               </div>
               <h3 className="text-black text-4xl leading-snug font-bold">
                 Öncelikli Daire <br />
@@ -103,8 +88,8 @@ export default function Home() {
               </h3>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-36 h-auto mb-8 relative">
-                <IconCoil />
+              <div className="w-64 mb-8 relative">
+                <LottiePlayer animationData={springLottie} />
               </div>
               <h3 className="text-black text-4xl leading-snug font-bold">
                 Komşumuza <br />
