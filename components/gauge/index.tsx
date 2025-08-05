@@ -39,7 +39,6 @@ export function Gauge({ value = 100 }: GaugeProps) {
   const [strokeDashoffset, setStrokeDashoffset] = useState(0)
   const [displayValue, setDisplayValue] = useState(0)
 
-  // GSAP ScrollTrigger - Client only
   useGSAP(() => {
     if (typeof window === "undefined" || !containerRef.current) return
 
@@ -49,6 +48,7 @@ export function Gauge({ value = 100 }: GaugeProps) {
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "play none none pause",
+        once: true,
         onEnter: () => {
           // Animate number
           animateNumber(value, setDisplayValue)
@@ -63,20 +63,6 @@ export function Gauge({ value = 100 }: GaugeProps) {
             })
           }
         },
-        // onEnterBack: () => {
-        //   // Animate number
-        //   animateNumber(value, setDisplayValue)
-
-        //   // Animate SVG circle fill independently
-        //   if (pathRef.current) {
-        //     const pathLength = pathRef.current.getTotalLength()
-        //     gsap.to(pathRef.current, {
-        //       strokeDashoffset: pathLength - (pathLength * value) / 100,
-        //       duration: 2, // 2 second duration
-        //       ease: "expo.out",
-        //     })
-        //   }
-        // },
       },
     })
   }, [value])
