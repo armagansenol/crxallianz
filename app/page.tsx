@@ -3,15 +3,16 @@ import { Gauge } from "@/components/gauge"
 import { IconAllianz, IconCollab, Logo } from "@/components/icons"
 import { LottiePlayer } from "@/components/lottie-player"
 import { Video } from "@/components/utility/video"
-import cupLottie from "@/public/lottie/cup.json"
-import packLottie from "@/public/lottie/pack.json"
-import springLottie from "@/public/lottie/spring.json"
 import { colors } from "@/styles/config.mjs"
 import { ChevronDown } from "lucide-react"
 
+import cupLottie from "@/public/lottie/cup.json"
+import packLottie from "@/public/lottie/pack.json"
+import springLottie from "@/public/lottie/spring.json"
+
 export default function Home() {
   return (
-    <div className="relative" style={{ fontFamily: `"futura-pt", sans-serif` }}>
+    <div className="relative overflow-hidden" style={{ fontFamily: `"futura-pt", sans-serif` }}>
       <div className="flex items-center justify-between py-3 px-10 absolute top-0 left-0 right-0 z-50 bg-white/80 ">
         <div className="w-28">
           <Logo fill={colors["bricky-brick"]} />
