@@ -103,7 +103,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col items-center justify-center gap-8 mb-16">
         <h3 className="text-black text-5xl leading-none font-medium text-center">
-          İlk 100
+          İlk 50
           <br />
           Daireye Özel
         </h3>
