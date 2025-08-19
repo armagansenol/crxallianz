@@ -32,7 +32,7 @@ const animateNumber = (
   }
 }
 
-export function Gauge({ value = 100 }: GaugeProps) {
+export function Gauge({ value = 50 }: GaugeProps) {
   const pathRef = useRef<SVGPathElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [strokeDasharray, setStrokeDasharray] = useState(0)

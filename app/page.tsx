@@ -13,15 +13,15 @@ import springLottie from "@/public/lottie/spring.json"
 export default function Home() {
   return (
     <div className="relative overflow-hidden" style={{ fontFamily: `"futura-pt", sans-serif` }}>
-      <div className="flex items-center justify-between py-3 px-10 absolute top-0 left-0 right-0 z-50 bg-white/80 ">
+      <div className="flex items-center justify-between lg:justify-center lg:gap-24 py-3 px-10 absolute top-0 left-0 right-0 z-50 bg-white/80 ">
         <div className="w-28">
           <Logo fill={colors["bricky-brick"]} />
         </div>
         <div className="w-28">
           <IconAllianz />
         </div>
-        <div className="w-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl font-light">
-          <IconCollab />
+        <div className="w-10 lg:w-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl font-light">
+          <IconCollab fill="black" />
         </div>
       </div>
       <section className="relative h-svh bg-bricky-brick z-10 overflow-hidden">
